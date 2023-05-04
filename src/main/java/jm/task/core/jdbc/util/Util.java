@@ -9,8 +9,10 @@ public class Util {
     private static final String username = "root";
     private static final String password = "root";
 
+    private static Connection connection;
+
     public static Connection getConnection() {
-        Connection connection;
+
         try {
             Class.forName(db_driver);
             connection = DriverManager.getConnection(URL, username, password);
